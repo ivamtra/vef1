@@ -1,0 +1,29 @@
+
+.info-card {
+    display: flex;
+    gap: 10px;
+    background-color: white;
+    max-width: 450px;
+    border-radius: 3%;
+    box-shadow: 2px 2px 1px #888888;
+    font-family: 'Times New Roman', Times, serif;
+    color: #2E2E2E;
+    /* color:aquamarine; */
+
+}
+
+.photo {
+    position: relative;
+    left: 2px;
+    top: 2px;
+}
+
+img {
+    border-radius: 3%;
+}
+
+
+
+body {
+    background-color: #E8E8E8;
+}
