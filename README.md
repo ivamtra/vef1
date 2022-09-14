@@ -2,4 +2,4 @@
 
 ## Þetta repo inniheldur öll verkefnin fyrir önnina
 
-### Hlekkur á live síðu <a href="https://vef1-ivan.netlify.app/">Vefforritun</a>
+###  <a href="https://vef1-ivan.netlify.app/">Hlekkur á live síðu</a>
