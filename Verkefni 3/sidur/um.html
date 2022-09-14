@@ -1,39 +1,40 @@
 <!DOCTYPE html>
 <html lang="is">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <meta charset="utf-8" />
+    <title>Um forrit og forritun</title>
+    <link rel="stylesheet" href="../styles.css" />
   </head>
   <body>
     <header>
-      <h1>Um Forritun</h1>
-      <nav>
-        <a href="#main">Beint í efni</a>
-        <br />
-
-        <a href="./um.html"
-          >Upplýsingar um forrit og forritun, sögu og dæmi um forrit.</a
-        >
-        <br />
-
-        <a href="./konnun.html"
-          >Könnun um þekkingu og reynslu lesanda af forritun.</a
-        >
-        <br />
-
-        <a href="./baekur.html">Listi af bókum um forritun.</a>
-      </nav>
+      <h1 class="header-text">Um forrit og forritun</h1>
     </header>
-    <main id="main">
+
+    <p class="sr-only"><a href="#efni">Beint í efni</a></p>
+
+    <nav>
+      <ul>
+        <li><a href="../index.html">Forsíða</a></li>
+        <li>
+          <strong>Um forrit og forritun</strong>
+        </li>
+        <li><a href="./konnun.html">Könnun um forritun</a></li>
+        <li><a href="./baekur.html">Bækur um forritun</a></li>
+      </ul>
+    </nav>
+
+    <main id="efni">
       <blockquote>
-        „Programming is the art of telling another human being what one wants
-        the computer to do.“ —Donald Knuth
+        <p>
+          „Programming is the art of telling another human being what one wants
+          the computer to do.“
+        </p>
+        <footer><p>—Donald Knuth</p></footer>
       </blockquote>
 
-      <article>
+      <section>
         <h2>Forrit</h2>
+
         <p>
           Forrit er safn skipana sem lýsa verkefni eða verkefnum sem tölva á að
           vinna.
@@ -53,7 +54,8 @@
           Forrit eru oft rituð af forriturum, en einnig geta önnur forrit búið
           þau til.
         </p>
-        Orðasafn
+
+        <h3>Orðasafn</h3>
 
         <p>
           Forrit sem látin eru notendum í té eru nefnd notendahugbúnaður þar sem
@@ -70,21 +72,24 @@
           sama hátt.
         </p>
 
-        <p>
-          Texti fenginn af Wikipedia síðunni „<cite
-            ><a href="https://is.wikipedia.org/wiki/Forrit">Forrit</a></cite
-          >“ í ágúst 2022.
-        </p>
+        <small
+          >Texti fenginn af
+          <a href="https://is.wikipedia.org/wiki/Forrit"
+            >Wikipedia síðunni „Forrit“</a
+          >
+          í ágúst 2022.</small
+        >
+      </section>
 
-        <img src="../myndir/tolva.jpg" alt="tolva" />
+      <img class="um-mynd" src="../myndir/tolva.jpg" alt="" />
 
+      <section>
         <h2>Vinsæl forritunarmál</h2>
-
         <p>
-          Samkvæmt IEEE Spectrum’s Top Programming Languages 2022 eru tíu
+          Samkvæmt
+          <a href="">IEEE Spectrum’s Top Programming Languages 2022</a> eru tíu
           vinsælustu forritunarmálin árið 2022:
         </p>
-
         <ol>
           <li>Python</li>
           <li>C++</li>
@@ -97,32 +102,32 @@
           <li>Go</li>
           <li>Assembly</li>
         </ol>
+      </section>
 
+      <section>
         <h2>Dæmi um forrit</h2>
-
         <p>
-          Forritskóði sem reiknar hrópmerkt í Python, fengin af
+          Forritskóði sem reiknar hrópmerkt í Python,
           <a href="https://en.wikipedia.org/wiki/Python_(programming_language)"
-            >Wikipedia:</a
-          >
+            >fengin af Wikipedia</a
+          >:
         </p>
-        <code>
-          n = int(input('Type a number, and its factorial will be printed: '))
-          <br />
+        <pre><code>
+n = int(input('Type a number, and its factorial will be printed: '))
 
-          if n &lt; 0: <br />
-          raise ValueError('You must enter a non-negative integer') <br />
-          factorial = 1 <br />
+if n &lt; 0:
+    raise ValueError('You must enter a non-negative integer')
 
-          for i in range(2, n + 1): <br />
-          factorial *= i <br />
+factorial = 1
+for i in range(2, n + 1):
+    factorial *= i
 
-          print(factorial) <br />
-        </code>
-      </article>
-      <footer>
-        <a href="../index.html">Aftur á forsíðu</a>
-      </footer>
+print(factorial)
+        </code></pre>
+      </section>
     </main>
+    <footer class="footer">
+      <p><a href="../index.html">Til baka á forsíðu</a></p>
+    </footer>
   </body>
 </html>
