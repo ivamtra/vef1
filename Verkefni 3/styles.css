@@ -176,6 +176,11 @@ Setjum inn „reset“ sem fjarlægir margin og padding af öllu
 
   tr > td {
     padding-bottom: 0.2rem;
+    margin-right: 0.6rem;
+  }
+
+  td {
+    padding-right: 1rem;
   }
 
   button {
