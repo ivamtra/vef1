@@ -138,6 +138,7 @@ Setjum inn „reset“ sem fjarlægir margin og padding af öllu
   header {
     background-color: #00bfff;
     padding: 0.75rem 0;
+    width: 100%;
   }
 
   header h1 {
@@ -211,7 +212,7 @@ Setjum inn „reset“ sem fjarlægir margin og padding af öllu
     flex-direction: column;
     gap: 1rem;
     margin-bottom: 1em;
-    padding: 1rem;
+    padding: 0.75rem;
   }
 
   .um-mynd {
