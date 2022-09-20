@@ -3,8 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <title>Könnun um forritun</title>
-    <link rel="stylesheet" href="../styles.css">
-
+    <link rel="stylesheet" href="../styles.css" />
   </head>
   <body>
     <header>
@@ -27,7 +26,9 @@
         <fieldset>
           <legend>Reynsla af forritun</legend>
           <div>
-            <label for="forritunarmal_kann">Forritunarmál sem ég kann best</label>
+            <label for="forritunarmal_kann"
+              >Forritunarmál sem ég kann best</label
+            >
             <input
               list="forritunarmal"
               required
@@ -40,6 +41,7 @@
               >Hversu vel kanntu forritunarmálið á skalanum 0 til 10?</label
             >
             <input
+              class="slider"
               type="range"
               min="0"
               max="10"
@@ -50,25 +52,50 @@
           </div>
 
           <div>
-            <label for="forritunarmal_best">Hvað finnst þér best við forritunarmálið?</label>
-            <input type="text" required id="forritunarmal_best" name="forritunarmal_best" />
+            <label for="forritunarmal_best"
+              >Hvað finnst þér best við forritunarmálið?</label
+            >
+            <input
+              type="text"
+              required
+              id="forritunarmal_best"
+              name="forritunarmal_best"
+            />
           </div>
           <div>
-            <label for="forritunarmal_verst">Hvað finnst þér verst við forritunarmálið?</label>
-            <input type="text" required id="forritunarmal_verst" name="forritunarmal_verst" />
+            <label for="forritunarmal_verst"
+              >Hvað finnst þér verst við forritunarmálið?</label
+            >
+            <input
+              type="text"
+              required
+              id="forritunarmal_verst"
+              name="forritunarmal_verst"
+            />
           </div>
           <div>
             <label for="forritunarmal_daemi">Dæmi um forrit:</label>
-            <input type="file" id="forritunarmal_daemi" name="forritunarmal_daemi" />
+            <input
+              type="file"
+              id="forritunarmal_daemi"
+              name="forritunarmal_daemi"
+            />
           </div>
         </fieldset>
 
         <fieldset>
           <legend>
-            <label for="forritunarmal_laera">Forritunarmál sem mig langar að læra</label>
+            <label for="forritunarmal_laera"
+              >Forritunarmál sem mig langar að læra</label
+            >
           </legend>
           <!-- Til samanburðar við að ofan, notum <select> með möguleika á að velja mörg stök -->
-          <select name="forritunarmal_laera" id="forritunarmal_laera" multiple required>
+          <select
+            name="forritunarmal_laera"
+            id="forritunarmal_laera"
+            multiple
+            required
+          >
             <option>Python</option>
             <option>C++</option>
             <option>Java</option>
@@ -243,7 +270,9 @@
           </select>
 
           <div>
-            <label for="hvers_vegna">Hvers vegna langar þig að læra þetta forritunarmál</label>
+            <label for="hvers_vegna"
+              >Hvers vegna langar þig að læra þetta forritunarmál</label
+            >
             <select id="hvers_vegna" name="hvers_vegna">
               <option>-Veldu úr listanum- (sjálfgefið)</option>
               <option>Vegna vinnu</option>

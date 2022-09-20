@@ -223,3 +223,11 @@ Setjum inn „reset“ sem fjarlægir margin og padding af öllu
   .um-mynd {
     width: 100%;
   }
+
+
+  input[type='range']::-webkit-slider-runnable-track {
+    height: 10px;
+    -webkit-appearance: none;
+    color: #13bba4;
+    margin-top: -1px;
+  }
