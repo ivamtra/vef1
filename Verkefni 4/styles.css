@@ -19,6 +19,8 @@ html {
 
 /* Breytur sem skal nota */
 
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Domine&family=Nunito&display=swap');
 :root {
   /* Grunn bilið okkar er 1rem == 16px */
   --spacing: 1rem;
@@ -53,6 +55,7 @@ body {
 
 h1, h2, h3 {
   font-family: var(--font-family-heading);
+  margin-bottom: var(--spacing);
 }
 
 img {
@@ -61,12 +64,18 @@ img {
 
 .button {
   display: inline-block;
+  background-color: var(--color-primary);
+  padding: 0.5em;
+  text-decoration: none;
+  color: var(--color-text);
+  border-radius: 5%;
 
   /* TODO útlit á button */
 }
 
 .button-secondary {
   /* TODO */
+  background-color: #fff;
 }
 
 /* Layout */
@@ -74,6 +83,8 @@ img {
 main {
   margin: 0 auto;
   max-width: var(--max-width);
+  display: flex;
+  flex-direction: column;
 }
 
 .info-boxes {
@@ -85,14 +96,120 @@ main {
 /* Header */
 
 header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  background-image:url("./myndir/header.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+
+  margin-bottom: var(--spacing);
+  
+  color: var(--color-header);
+  padding: var(--spacing);
+  gap: var(--spacing);
 }
 
 /* TODO */
 
 /* Upplýsingasvæði */
 
+.info {
+  display: flex;
+  max-height: 25em;
+  margin-bottom: 1em;
+  gap: 20em;
+
+}
+
+.reverse {
+  flex-direction: row-reverse;
+}
+
+.big-info {
+  max-width:500px;
+}
+
+/* Myndir */
+
+.big-img {
+  max-width: 500px;
+}
+
+.left-rotate {
+  transform: rotate(-3deg);
+}
+
+.right-rotate{
+  transform: rotate(3deg);
+}
+
+/*            */
+
+
 /* TODO */
 
 /* Cards */
 
+.card-row {
+  display: flex;
+  max-width: 80%;
+  gap: var(--spacing);
+  margin-bottom: var(--spacing);
+  align-self: center;
+}
+
+.small-img {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+  border-top-left-radius: 2%;
+  border-top-right-radius: 2%;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: var(--spacing);
+}
+
+.card  {
+  display: flex;
+  flex-direction: column-reverse;
+  width: 50%;
+  justify-content: flex-end;
+  border-radius: 100%;
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+  height: 30%;
+  justify-content: space-between;
+  height: 100%;
+  border: 1px solid black;
+  padding: var(--spacing);
+
+
+}
+
+footer {
+  display:flex;
+  justify-content: center;
+  padding: var(--spacing);
+  background-color: var(--color-primary);
+}
+
+
+.protection {
+}
+
+.header-title {
+  font-size: 3em;
+  font-weight: 600;
+}
 /* TODO */
