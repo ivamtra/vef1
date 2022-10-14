@@ -15,7 +15,8 @@ let points = 0;
 
 /**
  * Athugar hvort gefin tala sé á bilinu [min, max].
- *
+ * Prentar út villumeldingu ef talan er ekki
+ * lögleg.
  * @param {string | number} numAsString Tala sem á að athuga.
  * @param {number} min Lágmark sem tala má vera.
  * @param {number} max Hámark sem tala má vera.
@@ -23,7 +24,9 @@ let points = 0;
  */
 function isValidNum(numAsString, min, max) {
   //Óþarfi að converta út af type coercion
-  return numAsString >= min && numAsString <= max;
+  const returnValue = numAsString >= min && numAsString <= max;
+  if (!returnValue) console.error(numAsString + " er ekki löglegt gildi.");
+  return returnValue;
 }
 
 /**
@@ -52,35 +55,21 @@ function randomNumber(min, max) {
  * Spilum leik.
  */
 function play() {
-  const isIllegalNumOfCups = (num, min, max) => {
-    if (!isValidNum(num, min, max)) {
-      console.error(num + " er ekki löglegt gildi.");
-      return true
-    }
-    return false
-  }
   do {
     const numOfCups = prompt(`Hve marga bolla?
 Verður að vera gildi á bilinu [${MIN_NUM_OF_CUPS}, ${MAX_NUM_OF_CUPS}].
 Þú færð N-1 fyrir að finna bolta í N bollum.
 Ýttu á cancel eða ESC til að hætta.`);
-    if(isIllegalNumOfCups(numOfCups, MIN_NUM_OF_CUPS, MAX_NUM_OF_CUPS))
-      return
-    
-    
+    if (!isValidNum(numOfCups, MIN_NUM_OF_CUPS, MAX_NUM_OF_CUPS)) return;
 
     // Ýtt á ESC/Cancel
     if (numOfCups === null) {
       return;
     }
-    console.log("penis");
     const cupChosen = prompt(`Hvaða bolta velurðu af ${numOfCups}?`);
     const winnerCup = randomNumber(1, numOfCups);
 
-    if(isIllegalNumOfCups(cupChosen, 1, numOfCups))
-      return
-
-
+    if (!isValidNum(cupChosen, 1, numOfCups)) return;
 
     if (winnerCup == cupChosen) {
       alert("Rétt! þú færð 1 stig.");
@@ -107,3 +96,4 @@ function games() {
         `Leikir spilaðir: ${played}. Unnir leikir: ${won}. Stig: ${won} `
       );
 }
+ 
