@@ -1,5 +1,4 @@
-/** Lágmark bolla sem má velja. */
-const MIN_NUM_OF_CUPS = 2;
+t MIN_NUM_OF_CUPS = 2;
 
 /** Hámark bolla sem má velja. */
 const MAX_NUM_OF_CUPS = 10;
@@ -97,3 +96,4 @@ function games() {
       );
 }
  
+
