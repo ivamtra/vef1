@@ -55,19 +55,16 @@ function play() {
   const isIllegalNumOfCups = (num, min, max) => {
     if (!isValidNum(num, min, max)) {
       console.error(num + " er ekki löglegt gildi.");
-      return true
+      return true;
     }
-    return false
-  }
+    return false;
+  };
   do {
     const numOfCups = prompt(`Hve marga bolla?
 Verður að vera gildi á bilinu [${MIN_NUM_OF_CUPS}, ${MAX_NUM_OF_CUPS}].
 Þú færð N-1 fyrir að finna bolta í N bollum.
 Ýttu á cancel eða ESC til að hætta.`);
-    if(isIllegalNumOfCups(numOfCups, MIN_NUM_OF_CUPS, MAX_NUM_OF_CUPS))
-      return
-    
-    
+    if (isIllegalNumOfCups(numOfCups, MIN_NUM_OF_CUPS, MAX_NUM_OF_CUPS)) return;
 
     // Ýtt á ESC/Cancel
     if (numOfCups === null) {
@@ -77,10 +74,7 @@ Verður að vera gildi á bilinu [${MIN_NUM_OF_CUPS}, ${MAX_NUM_OF_CUPS}].
     const cupChosen = prompt(`Hvaða bolta velurðu af ${numOfCups}?`);
     const winnerCup = randomNumber(1, numOfCups);
 
-    if(isIllegalNumOfCups(cupChosen, 1, numOfCups))
-      return
-
-
+    if (isIllegalNumOfCups(cupChosen, 1, numOfCups)) return;
 
     if (winnerCup == cupChosen) {
       alert("Rétt! þú færð 1 stig.");
