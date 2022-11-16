@@ -1,0 +1,41 @@
+.video-body {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  width: 100vw;
+}
+
+.gillz-img {
+  height: 350px;
+}
+
+.hringja-img {
+  cursor: pointer;
+  height: 200px;
+}
+
+.hringja {
+  align-items: center;
+  display: flex;
+}
+
+nav {
+  align-items: center;
+  background-color: #eee;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  margin: 2em;
+  padding: 2em;
+  width: 500px;
+}
+
+nav a {
+  font-size: 2.5em;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=styles.css.map */
